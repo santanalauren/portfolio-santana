@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BYD | Apresentação comercial · Lauren Santana</title>
+<meta name="description" content="Case: apresentação comercial para a linha de veículos elétricos da BYD. Design e direção de arte por Lauren Santana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#000;--paper:#fff;--red:#e10600;--mute:#8a8a8a;--line:#e6e6e6;--w:1120px;--pad:clamp(20px,5vw,64px);--e:cubic-bezier(.16,1,.3,1);box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:auto!important}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-stopped{overflow:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
+body.hold{overflow:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--pad)}
+h2{font-size:clamp(34px,4.4vw,46px);font-weight:400;letter-spacing:-.015em;margin:0 0 28px}
+.lbl{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 18px}
+
+/* topo */
+.top{display:flex;justify-content:space-between;align-items:center;padding-top:calc(26px + env(safe-area-inset-top,0px));font-size:14px;font-weight:300}
+.top .yr{color:var(--red);font-weight:400}
+.back{display:inline-flex;align-items:center;gap:8px;transition:gap .3s var(--e)}
+.back:hover{gap:14px}
+
+/* capa */
+.cover{min-height:100svh;display:flex;flex-direction:column}
+.ttl{margin:auto 0;align-self:center;width:max-content;max-width:100%;padding-bottom:4svh;font-size:clamp(88px,22vw,330px);display:flex;flex-direction:column;align-items:flex-end}
+.pf{margin:0;display:flex;font-weight:300;font-size:1em;line-height:.9;letter-spacing:-.04em}
+.pf .ch{display:inline-block;opacity:0;transform:translateY(.3em);filter:blur(14px);transition:opacity 1.6s var(--e),transform 1.6s var(--e),filter 1.6s var(--e);transition-delay:calc(var(--i)*110ms)}
+.ttl.on1 .pf .ch{opacity:1;transform:none;filter:blur(0)}
+.wel{margin:-.2em 0 0;display:flex;gap:.3em;font-size:.12em;font-weight:300;text-transform:uppercase;color:#4a4a4a;line-height:1.2;white-space:nowrap}
+.wel span{opacity:0;filter:blur(8px);letter-spacing:.22em;transition:opacity 1.5s var(--e),filter 1.5s var(--e),letter-spacing 1.7s var(--e)}
+.wel .w2{color:var(--red);transition-delay:.28s}
+.ttl.on2 .wel span{opacity:1;filter:blur(0);letter-spacing:.01em}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:28px 0 36px;border-top:1px solid var(--line);font-size:14px}
+.meta dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:6px;font-weight:400}
+.meta dd{margin:0;font-weight:300}
+
+/* mockups (imagens ilustrativas) */
+.mk{position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(120% 90% at 78% 12%,#7a0a05 0%,#1a0302 45%,#000 80%);color:#fff;isolation:isolate}
+.mk::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 64px),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 64px);z-index:-1}
+.mk b{position:absolute;left:7%;top:9%;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.mk h3{position:absolute;left:7%;bottom:12%;margin:0;max-width:54%;font-size:clamp(20px,3vw,40px);font-weight:300;line-height:1.05;letter-spacing:-.02em}
+.mk h3 em{font-style:normal;color:#ff4a3d}
+.mk i{position:absolute;right:7%;bottom:12%;width:30%;aspect-ratio:2.4;border-radius:999px 999px 30% 30%/90% 90% 20% 20%;background:linear-gradient(180deg,#2b0a08,#000);border:1px solid rgba(255,255,255,.14);box-shadow:0 0 60px rgba(225,6,0,.35)}
+.mk .big{position:absolute;right:7%;top:12%;font-size:clamp(46px,9vw,130px);font-weight:300;letter-spacing:-.05em;line-height:1}
+.mk figcaption{position:absolute;left:18px;bottom:16px;right:18px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hero-mk{aspect-ratio:16/8.4;border-radius:36px}
+.hero-mk .big{font-size:clamp(60px,12vw,190px)}
+
+/* intro do case */
+.intro{display:grid;grid-template-columns:1fr 2fr;gap:clamp(24px,6vw,96px);padding:clamp(72px,12vw,150px) 0}
+.intro p{margin:0 0 20px;font-size:clamp(20px,2.4vw,30px);font-weight:300;line-height:1.35;letter-spacing:-.01em}
+.intro em{font-style:normal;color:var(--red);font-weight:500}
+
+/* contexto / desafio / solução */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);padding-bottom:clamp(72px,12vw,150px)}
+.trio article{border:1px solid var(--line);border-radius:28px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:14px;min-height:300px;transition:background .5s var(--e),color .5s var(--e),border-color .5s var(--e)}
+.trio article:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.trio span{font-size:13px;color:var(--red);letter-spacing:.14em}
+.trio h3{margin:0;font-size:28px;font-weight:400;letter-spacing:-.01em}
+.trio p{margin:auto 0 0;font-size:15px;font-weight:300;line-height:1.6;color:inherit;opacity:.8}
+
+/* processo */
+.proc{background:var(--ink);color:#fff;border-radius:36px 36px 0 0;padding:clamp(72px,10vw,130px) 0}
+.proc h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #2a2a2a}
+.steps li{list-style:none;padding:28px 24px 8px 0;border-right:1px solid #2a2a2a;padding-left:24px}
+.steps li:first-child{padding-left:0}.steps li:last-child{border-right:0}
+.steps b{display:block;font-size:clamp(44px,5vw,72px);font-weight:300;letter-spacing:-.04em;color:#ff4a3d;line-height:1}
+.steps h3{margin:18px 0 8px;font-size:20px;font-weight:400}
+.steps p{margin:0;font-size:14px;font-weight:300;color:#aaa;line-height:1.6}
+.steps ul{margin:0;padding:0}
+
+/* galeria */
+.gal{padding:clamp(72px,10vw,130px) 0}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,19vw,260px);gap:clamp(12px,1.6vw,20px)}
+.bento .mk{border-radius:24px;transition:transform .8s var(--e)}
+.bento .mk:hover{transform:scale(.985)}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2}.g3{grid-column:span 2}.g4{grid-column:span 3}.g5{grid-column:span 3}
+.bento .mk h3{font-size:clamp(15px,2vw,26px)}
+.bento .mk .big{font-size:clamp(32px,6vw,84px)}
+.g1 h3{font-size:clamp(22px,3.4vw,48px)}
+.light{background:#f2f0ec;color:#000}.light::before{opacity:.5}.light i{background:linear-gradient(180deg,#fff,#ddd);border-color:#ccc;box-shadow:0 20px 40px rgba(0,0,0,.12)}.light b,.light figcaption{color:#555}
+
+/* resultados */
+.res{background:var(--ink);color:#fff;padding:clamp(72px,10vw,130px) 0}
+.res h2{color:#fff}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px);margin-bottom:clamp(40px,6vw,72px)}
+.nums div{border-top:1px solid #2a2a2a;padding-top:22px}
+.nums strong{display:block;font-size:clamp(56px,8vw,112px);font-weight:300;letter-spacing:-.05em;line-height:1}
+.nums strong small{font-size:.45em;color:#ff4a3d;letter-spacing:0;margin-left:.08em}
+.nums .cap{display:block;margin-top:12px;font-size:14px;font-weight:300;color:#aaa;max-width:22ch}
+.quote{display:flex;gap:20px;align-items:flex-start;padding:clamp(22px,3vw,36px);border-radius:24px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.14);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.quote b{font-size:56px;line-height:.8;color:var(--red);font-weight:500}
+.quote p{margin:0 0 12px;font-size:clamp(18px,2.2vw,26px);font-weight:300;line-height:1.35}
+.quote small{font-size:13px;color:#aaa}
+
+/* entregáveis */
+.dlv{padding:clamp(72px,10vw,130px) 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);transition:padding .25s ease}
+.row:first-of-type{border-top:1px solid var(--line)}
+.row h3{margin:0;font-size:clamp(20px,2.6vw,30px);font-weight:400;letter-spacing:-.01em}
+.row span{color:var(--mute);font-size:14px;font-weight:300;text-align:right}
+.row:hover{padding-left:12px}.row:hover h3{color:var(--red)}
+.tools{margin-top:28px;font-size:14px;font-weight:300;color:var(--mute)}
+
+/* CTA + rodapé */
+.cta{background:var(--ink);color:#fff;border-radius:36px 36px 0 0}
+.cta .in{max-width:var(--w);margin:0 auto;padding:clamp(72px,10vw,120px) var(--pad);display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:end}
+.cta h2{font-size:clamp(44px,6.4vw,84px);line-height:1;margin:0 0 28px;font-weight:300;letter-spacing:-.03em;color:#fff}
+.cta p{margin:0 0 22px;font-size:15px;font-weight:300;max-width:30ch;color:#ccc}
+.next{display:block;border-top:1px solid #2a2a2a;padding-top:20px}
+.next small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#888}
+.next strong{display:block;font-size:clamp(28px,3.4vw,44px);font-weight:300;margin-top:6px;transition:color .3s}
+.next:hover strong{color:#ff4a3d}
+.btn{display:inline-flex;align-items:center;gap:12px;font-size:15px;transition:transform .35s var(--e),opacity 1.2s var(--e),translate 1.2s var(--e),filter 1.2s var(--e)}
+.btn i{position:relative;overflow:hidden;width:36px;height:36px;border:1px solid currentColor;border-radius:10px;display:grid;place-items:center;transition:color .35s,border-color .35s}
+.btn i::before{content:"";position:absolute;inset:0;background:var(--red);transform:translateY(101%);transition:transform .45s var(--e)}
+.btn i svg{grid-area:1/1;position:relative;width:12px;height:12px;transition:transform .45s var(--e)}
+.btn i svg+svg{transform:translate(-260%,260%)}
+.btn span{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:2px;transition:background-size .45s var(--e)}
+.btn:hover i,.btn:focus-visible i{color:#fff;border-color:var(--red)}
+.btn:hover i::before{transform:none}
+.btn:hover i svg:first-child{transform:translate(260%,-260%)}
+.btn:hover i svg+svg{transform:none}
+.btn:hover span{background-size:100% 1px}
+.ft{background:var(--ink);color:#fff;font-size:11px;font-weight:300}
+.ft .in{max-width:var(--w);margin:0 auto;padding:20px var(--pad) calc(28px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #1c1c1c}
+
+/* aparecer no scroll */
+.rv{opacity:0;translate:0 18px;filter:blur(6px);transition:opacity 1.2s var(--e),translate 1.2s var(--e),filter 1.2s var(--e);transition-delay:var(--d,0s)}
+.rv.is-in{opacity:1;translate:0 0;filter:blur(0)}
+.btn.rv{transition:transform .35s var(--e),opacity 1.2s var(--e),translate 1.2s var(--e),filter 1.2s var(--e);transition-delay:0s,var(--d,0s),var(--d,0s),var(--d,0s)}
+.row.rv{transition:padding .25s ease,opacity 1.2s var(--e),translate 1.2s var(--e),filter 1.2s var(--e);transition-delay:0s,var(--d,0s),var(--d,0s),var(--d,0s)}
+
+/* blur inferior */
+.bb{position:fixed;left:0;right:0;bottom:0;height:calc(96px + env(safe-area-inset-bottom,0px));pointer-events:none;z-index:50}
+.bb i{position:absolute;inset:0;-webkit-backdrop-filter:blur(var(--b));backdrop-filter:blur(var(--b));-webkit-mask-image:linear-gradient(to bottom,transparent calc(var(--s)*1%),#000 calc(var(--s)*1% + 12.5%),#000 calc(var(--s)*1% + 25%),transparent calc(var(--s)*1% + 37.5%));mask-image:linear-gradient(to bottom,transparent calc(var(--s)*1%),#000 calc(var(--s)*1% + 12.5%),#000 calc(var(--s)*1% + 25%),transparent calc(var(--s)*1% + 37.5%))}
+.bb .l6{-webkit-mask-image:linear-gradient(to bottom,transparent 62.5%,#000 75%);mask-image:linear-gradient(to bottom,transparent 62.5%,#000 75%)}
+
+@media (max-width:860px){
+ .meta{grid-template-columns:1fr 1fr}
+ .intro,.cta .in{grid-template-columns:1fr}
+ .trio,.nums{grid-template-columns:1fr}.trio article{min-height:0}
+ .steps{grid-template-columns:1fr 1fr}.steps li{border-right:0;padding-left:0;border-bottom:1px solid #2a2a2a;padding-bottom:24px}
+ .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,42vw,230px)}
+ .g1{grid-column:span 2;grid-row:span 2}.g2,.g3,.g4,.g5{grid-column:span 1}
+ .ttl{font-size:34vw}
+ .row{flex-direction:column;align-items:flex-start;gap:6px}.row span{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;translate:none;filter:none;transition:none}.pf .ch,.wel span{transition:none}}
+</style>
+<noscript><style>.pf .ch,.wel span,.rv{opacity:1!important;transform:none!important;translate:none!important;filter:none!important;letter-spacing:.01em!important}body.hold{overflow:auto}</style></noscript>
+</head>
+<body class="hold">
+
+<section class="cover">
+ <header class="wrap top" style="width:100%">
+  <a class="back" href="../index.html#projetos"><span aria-hidden="true">←</span> Projetos</a>
+  <span class="yr">2026</span>
+  <span>Comercial</span>
+ </header>
+ <div class="ttl" id="ttl">
+  <h1 class="pf" aria-label="BYD"><span class="ch" style="--i:0" aria-hidden="true">B</span><span class="ch" style="--i:1" aria-hidden="true">Y</span><span class="ch" style="--i:2" aria-hidden="true">D</span></h1>
+  <p class="wel" aria-label="Apresentação comercial"><span class="w1" aria-hidden="true">Apresentação</span><span class="w2" aria-hidden="true">comercial</span></p>
+ </div>
+ <dl class="wrap meta" style="width:100%">
+  <div><dt>Cliente</dt><dd>BYD</dd></div>
+  <div><dt>Serviço</dt><dd>Pitch deck e direção visual</dd></div>
+  <div><dt>Papel</dt><dd>Design e direção de arte</dd></div>
+  <div><dt>Ano</dt><dd>2026</dd></div>
+ </dl>
+</section>
+
+<main>
+<section class="wrap">
+ <figure class="mk hero-mk rv" aria-label="Imagem ilustrativa da apresentação">
+  <b>Veículos elétricos · 2026</b><span class="big">500<small style="font-size:.3em;letter-spacing:0"> km</small></span>
+  <h3>O futuro da mobilidade, <em>explicado</em> em minutos.</h3><i></i>
+  <figcaption><span>Imagem ilustrativa</span><span>Slide 01</span></figcaption>
+ </figure>
+
+ <div class="intro">
+  <div class="rv"><p class="lbl">Sobre o projeto</p></div>
+  <div>
+   <p class="rv">A BYD precisava apresentar sua linha de veículos elétricos para concessionárias e grandes frotistas de um jeito <em>direto, visual e consistente</em> com a marca.</p>
+   <p class="rv">Eu desenhei uma apresentação comercial modular, que transforma dados técnicos em uma história fácil de seguir e que o time de vendas adapta a cada reunião.</p>
+  </div>
+ </div>
+
+ <div class="trio">
+  <article class="rv"><span>01</span><h3>Contexto</h3><p>Reuniões comerciais com públicos diferentes (concessionárias, frotistas e parceiros) e um material que não acompanhava o ritmo das conversas.</p></article>
+  <article class="rv"><span>02</span><h3>Desafio</h3><p>Traduzir informações densas, como autonomia, eficiência e custo total de uso, em slides claros, sem perder rigor nem presença de marca.</p></article>
+  <article class="rv"><span>03</span><h3>Solução</h3><p>Um sistema de slides com hierarquia tipográfica forte, grandes números e áreas de produto, pensado para ser montado e reutilizado em minutos.</p></article>
+ </div>
+</section>
+
+<section class="proc">
+ <div class="wrap">
+  <p class="lbl rv">Processo</p>
+  <h2 class="rv">Do briefing ao deck final</h2>
+  <ul class="steps" style="padding:0;margin:0">
+   <li class="rv"><b>01</b><h3>Descoberta</h3><p>Entrevista com o time comercial, análise de apresentações anteriores e mapeamento das perguntas mais frequentes dos clientes.</p></li>
+   <li class="rv"><b>02</b><h3>Narrativa</h3><p>Estrutura da história: problema, solução, prova e próximo passo, com ordem flexível para cada reunião.</p></li>
+   <li class="rv"><b>03</b><h3>Direção visual</h3><p>Grid, escala tipográfica, paleta e biblioteca de componentes alinhados à identidade da marca.</p></li>
+   <li class="rv"><b>04</b><h3>Entrega</h3><p>Deck final, versão para envio em PDF e um guia rápido para o time editar sem quebrar o sistema.</p></li>
+  </ul>
+ </div>
+</section>
+
+<section class="gal wrap">
+ <p class="lbl rv">Telas do projeto</p>
+ <h2 class="rv">Um sistema, vários momentos</h2>
+ <div class="bento">
+  <figure class="mk g1 rv"><b>Abertura</b><span class="big">01</span><h3>Eletrificar é <em>escolher</em> o próximo passo.</h3><i></i><figcaption><span>Imagem ilustrativa</span><span>Capa</span></figcaption></figure>
+  <figure class="mk light g2 rv"><b>Dados</b><span class="big">0–100</span><h3>Desempenho em um número.</h3><figcaption><span>Ilustrativo</span><span>Slide 06</span></figcaption></figure>
+  <figure class="mk g3 rv"><b>Produto</b><h3>Linha <em>completa</em>.</h3><i></i><figcaption><span>Ilustrativo</span><span>Slide 09</span></figcaption></figure>
+  <figure class="mk g4 rv"><b>Comparativo</b><span class="big">-40%</span><h3>Custo total de uso.</h3><figcaption><span>Ilustrativo</span><span>Slide 14</span></figcaption></figure>
+  <figure class="mk light g5 rv"><b>Próximo passo</b><h3>Vamos agendar um <em>test drive</em>?</h3><figcaption><span>Ilustrativo</span><span>Fechamento</span></figcaption></figure>
+ </div>
+</section>
+
+<section class="res">
+ <div class="wrap">
+  <p class="lbl rv">Resultados</p>
+  <h2 class="rv">O que mudou na prática</h2>
+  <div class="nums">
+   <div class="rv"><strong><span data-count="32">32</span></strong><span class="cap">slides modulares reutilizáveis</span></div>
+   <div class="rv"><strong><span data-count="40">40</span><small>%</small></strong><span class="cap">menos tempo para montar uma proposta</span></div>
+   <div class="rv"><strong><span data-count="3">3</span></strong><span class="cap">formatos: reunião, evento e envio por e-mail</span></div>
+  </div>
+  <div class="quote rv"><b>“</b><div><p>A apresentação deixou a conversa com o cliente mais clara e mais rápida. O time passou a usar em todas as reuniões.</p><small>Nome Sobrenome · Cargo, BYD</small></div></div>
+ </div>
+</section>
+
+<section class="dlv wrap">
+ <p class="lbl rv">Entregáveis</p>
+ <h2 class="rv">O que entreguei</h2>
+ <div class="row rv"><h3>Pitch deck comercial</h3><span>32 slides · PowerPoint e Keynote</span></div>
+ <div class="row rv"><h3>Sistema de layouts</h3><span>Grid · tipografia · cores</span></div>
+ <div class="row rv"><h3>Biblioteca de gráficos e ícones</h3><span>Componentes editáveis</span></div>
+ <div class="row rv"><h3>Versão para envio</h3><span>PDF otimizado</span></div>
+ <div class="row rv"><h3>Guia rápido de uso</h3><span>Para o time comercial</span></div>
+ <p class="tools rv">Ferramentas: Figma · PowerPoint · Keynote</p>
+</section>
+</main>
+
+<section class="cta" id="contato">
+ <div class="in">
+  <div>
+   <h2 class="rv">Tem um desafio<br>parecido?</h2>
+   <p class="rv">Vamos conversar sobre como transformar a sua apresentação.</p>
+   <a class="btn rv" href="mailto:contato@exemplo.com"><i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></i><span>Começar agora</span></a>
+  </div>
+  <a class="next rv" href="../index.html#projetos"><small>Ver mais</small><strong>Todos os projetos →</strong></a>
+ </div>
+</section>
+<footer class="ft"><div class="in"><span>Copyright © 2026 | Todos os Direitos Reservados.</span><span>Lauren Santana · Creative designer</span></div></footer>
+
+<div class="bb" aria-hidden="true"><i style="--b:.5px;--s:0"></i><i style="--b:1px;--s:12.5"></i><i style="--b:2px;--s:25"></i><i style="--b:4px;--s:37.5"></i><i style="--b:8px;--s:50"></i><i class="l6" style="--b:16px"></i></div>
+
+<script>/* Lenis 1.1.20 (MIT) */function t(t,i,e){return Math.max(t,Math.min(i,e))}var i=class{isRunning=!1;value=0;from=0;to=0;currentTime=0;lerp;duration;easing;onUpdate;advance(i){if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=i;const s=t(0,this.currentTime/this.duration,1);e=s>=1;const o=e?1:this.easing(s);this.value=this.from+(this.to-this.from)*o}else this.lerp?(this.value=function(t,i,e,s){return function(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,i),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),this.onUpdate?.(this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:r}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,n?.(),this.onUpdate=r}};var e=class{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,e&&(this.debouncedResize=function(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}width=0;height=0;scrollHeight=0;scrollWidth=0;debouncedResize;wrapperResizeObserver;contentResizeObserver;destroy(){this.wrapperResizeObserver?.disconnect(),this.contentResizeObserver?.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}resize=()=>{this.onWrapperResize(),this.onContentResize()};onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)};onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)};get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}},s=class{events={};emit(t,...i){let e=this.events[t]||[];for(let t=0,s=e.length;t<s;t++)e[t]?.(...i)}on(t,i){return this.events[t]?.push(i)||(this.events[t]=[i]),()=>{this.events[t]=this.events[t]?.filter((t=>i!==t))}}off(t,i){this.events[t]=this.events[t]?.filter((t=>i!==t))}destroy(){this.events={}}},o=100/6,n={passive:!1},r=class{constructor(t,i={wheelMultiplier:1,touchMultiplier:1}){this.element=t,this.options=i,window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,n),this.element.addEventListener("touchstart",this.onTouchStart,n),this.element.addEventListener("touchmove",this.onTouchMove,n),this.element.addEventListener("touchend",this.onTouchEnd,n)}touchStart={x:0,y:0};lastDelta={x:0,y:0};window={width:0,height:0};emitter=new s;on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,n),this.element.removeEventListener("touchstart",this.onTouchStart,n),this.element.removeEventListener("touchmove",this.onTouchMove,n),this.element.removeEventListener("touchend",this.onTouchEnd,n)}onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})};onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})};onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})};onWheel=t=>{let{deltaX:i,deltaY:e,deltaMode:s}=t;i*=1===s?o:2===s?this.window.width:1,e*=1===s?o:2===s?this.window.height:1,i*=this.options.wheelMultiplier,e*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:i,deltaY:e,event:t})};onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}}},Lenis=class{_isScrolling=!1;_isStopped=!1;_isLocked=!1;_preventNextNativeScrollEvent=!1;_resetVelocityTimeout=null;__rafID=null;isTouching;time=0;userData={};lastVelocity=0;velocity=0;direction=0;options;targetScroll;animatedScroll;animate=new i;emitter=new s;dimensions;virtualScroll;constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:s=t,smoothWheel:o=!0,syncTouch:n=!1,syncTouchLerp:l=.075,touchInertiaMultiplier:h=35,duration:a,easing:c=t=>Math.min(1,1.001-Math.pow(2,-10*t)),lerp:p=.1,infinite:d=!1,orientation:u="vertical",gestureOrientation:m="vertical",touchMultiplier:v=1,wheelMultiplier:S=1,autoResize:w=!0,prevent:g,virtualScroll:f,overscroll:y=!0,autoRaf:E=!1,anchors:T=!1,__experimental__naiveDimensions:z=!1}={}){window.lenisVersion="1.1.20",t&&t!==document.documentElement||(t=window),this.options={wrapper:t,content:i,eventsTarget:s,smoothWheel:o,syncTouch:n,syncTouchLerp:l,touchInertiaMultiplier:h,duration:a,easing:c,lerp:p,infinite:d,gestureOrientation:m,orientation:u,touchMultiplier:v,wheelMultiplier:S,autoResize:w,prevent:g,virtualScroll:f,overscroll:y,autoRaf:E,anchors:T,__experimental__naiveDimensions:z},this.dimensions=new e(t,i,{autoResize:w}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("scrollend",this.onScrollEnd,{capture:!0}),this.options.anchors&&this.options.wrapper===window&&this.options.wrapper.addEventListener("click",this.onClick,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new r(s,{touchMultiplier:v,wheelMultiplier:S}),this.virtualScroll.on("scroll",this.onVirtualScroll),this.options.autoRaf&&(this.__rafID=requestAnimationFrame(this.raf))}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("scrollend",this.onScrollEnd,{capture:!0}),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.options.anchors&&this.options.wrapper===window&&this.options.wrapper.removeEventListener("click",this.onClick,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName(),this.__rafID&&cancelAnimationFrame(this.__rafID)}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}onScrollEnd=t=>{t instanceof CustomEvent||"smooth"!==this.isScrolling&&!1!==this.isScrolling||t.stopPropagation()};dispatchScrollendEvent=()=>{this.options.wrapper.dispatchEvent(new CustomEvent("scrollend",{bubbles:this.options.wrapper===window,detail:{lenisScrollEnd:!0}}))};setScroll(t){this.isHorizontal?this.options.wrapper.scrollTo({left:t,behavior:"instant"}):this.options.wrapper.scrollTo({top:t,behavior:"instant"})}onClick=t=>{const i=t.composedPath().find((t=>t instanceof HTMLAnchorElement&&t.getAttribute("href")?.startsWith("#")));if(i){const t=i.getAttribute("href");if(t){const i="object"==typeof this.options.anchors&&this.options.anchors?this.options.anchors:void 0;this.scrollTo(t,i)}}};onPointerDown=t=>{1===t.button&&this.reset()};onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;if(s.lenisStopPropagation)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;const r=0===i&&0===e;if(this.options.syncTouch&&o&&"touchstart"===s.type&&r&&!this.isStopped&&!this.isLocked)return void this.reset();const l="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(r||l)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>t instanceof HTMLElement&&("function"==typeof a&&a?.(t)||t.hasAttribute?.("data-lenis-prevent")||o&&t.hasAttribute?.("data-lenis-prevent-touch")||n&&t.hasAttribute?.("data-lenis-prevent-wheel")))))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",this.animate.stop(),void(s.lenisStopPropagation=!0);let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i),(!this.options.overscroll||this.options.infinite||this.options.wrapper!==window&&(this.animatedScroll>0&&this.animatedScroll<this.limit||0===this.animatedScroll&&e>0||this.animatedScroll===this.limit&&e<0))&&(s.lenisStopPropagation=!0),s.preventDefault();const p=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,{programmatic:!1,...p?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}})};resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isStopped||(this.isScrolling="native"),this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}};reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.reset(),this.isStopped=!1)}stop(){this.isStopped||(this.reset(),this.isStopped=!0)}raf=t=>{const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i),this.options.autoRaf&&(this.__rafID=requestAnimationFrame(this.raf))};scrollTo(i,{offset:e=0,immediate:s=!1,lock:o=!1,duration:n=this.options.duration,easing:r=this.options.easing,lerp:l=this.options.lerp,onStart:h,onComplete:a,force:c=!1,programmatic:p=!0,userData:d}={}){if(!this.isStopped&&!this.isLocked||c){if("string"==typeof i&&["top","left","start"].includes(i))i=0;else if("string"==typeof i&&["bottom","right","end"].includes(i))i=this.limit;else{let t;if("string"==typeof i?t=document.querySelector(i):i instanceof HTMLElement&&i?.nodeType&&(t=i),t){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();e-=this.isHorizontal?t.left:t.top}const s=t.getBoundingClientRect();i=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof i){if(i+=e,i=Math.round(i),this.options.infinite?p&&(this.targetScroll=this.animatedScroll=this.scroll):i=t(0,i,this.limit),i===this.targetScroll)return h?.(this),void a?.(this);if(this.userData=d??{},s)return this.animatedScroll=this.targetScroll=i,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),a?.(this),this.userData={},void requestAnimationFrame((()=>{this.dispatchScrollendEvent()}));p||(this.targetScroll=i),this.animate.fromTo(this.animatedScroll,i,{duration:n,easing:r,lerp:l,onStart:()=>{o&&(this.isLocked=!0),this.isScrolling="smooth",h?.(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),p&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),a?.(this),this.userData={},requestAnimationFrame((()=>{this.dispatchScrollendEvent()})),this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){const t=this.options.wrapper;return this.isHorizontal?t.scrollX??t.scrollLeft:t.scrollY??t.scrollTop}get scroll(){return this.options.infinite?(t=this.animatedScroll,i=this.limit,(t%i+i)%i):this.animatedScroll;var t,i}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}};globalThis.Lenis=Lenis,globalThis.Lenis.prototype=Lenis.prototype;</script>
+<script>
+(()=>{
+const body=document.body,ttl=document.getElementById("ttl"),reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let lenis=null;
+if(!reduced&&typeof Lenis!=="undefined"){
+ lenis=new Lenis({lerp:.08,wheelMultiplier:.9,smoothWheel:true});lenis.stop();
+ const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf);
+}
+const release=()=>{body.classList.remove("hold");if(lenis)lenis.start()};
+if(reduced){ttl.classList.add("on1","on2");release()}
+else requestAnimationFrame(()=>{ttl.classList.add("on1");setTimeout(()=>ttl.classList.add("on2"),1100);setTimeout(release,2700)});
+
+// aparecer no scroll
+if(!reduced&&"IntersectionObserver" in window){
+ const els=[...document.querySelectorAll(".rv")];
+ const io=new IntersectionObserver(es=>{let k=0;
+  es.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top||a.boundingClientRect.left-b.boundingClientRect.left).forEach(x=>{
+   x.target.style.setProperty("--d",(k++*.09).toFixed(2)+"s");x.target.classList.add("is-in");io.unobserve(x.target);
+  });
+ },{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+ els.forEach(e=>io.observe(e));
+}else document.querySelectorAll(".rv").forEach(e=>e.classList.add("is-in"));
+
+// contadores
+const cs=[...document.querySelectorAll("[data-count]")];
+if(!reduced&&"IntersectionObserver" in window){
+ const co=new IntersectionObserver(es=>es.forEach(x=>{
+  if(!x.isIntersecting)return;co.unobserve(x.target);
+  const el=x.target,end=+el.dataset.count,t0=performance.now(),d=1600;
+  const f=n=>{const u=Math.min(1,(n-t0)/d),v=1-Math.pow(1-u,4);el.textContent=Math.round(end*v);if(u<1)requestAnimationFrame(f)};
+  el.textContent="0";requestAnimationFrame(f);
+ }),{threshold:.6});
+ cs.forEach(c=>co.observe(c));
+}
+
+// botão magnético
+if(matchMedia("(pointer: fine)").matches&&!reduced){
+ const bt=[...document.querySelectorAll(".btn")];
+ addEventListener("pointermove",e=>{for(const b of bt){const r=b.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2);b.style.transform=Math.hypot(dx,dy)<120?"translate("+(dx*.16).toFixed(1)+"px,"+(dy*.16).toFixed(1)+"px)":""}});
+}
+})();
+</script>
+</body>
+</html>
